@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:group_56_nasr_cubit/category_model.dart';
-import 'package:group_56_nasr_cubit/main.dart';
+import 'package:group_56_nasr_cubit/screens/login_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
@@ -11,10 +11,24 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("build home again");
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.deepOrange,
         actions: [
+          IconButton(
+            onPressed: () async {
+              // var data = await Navigator.push(
+              //   context,
+              //   MaterialPageRoute(
+              //     builder: (context) => LoginScreen(),
+              //   ),
+              // );
+
+              // print(data);
+            },
+            icon: Icon(Icons.login),
+          ),
           IconButton(
             onPressed: () {
               EasyLocalization.of(context)!.currentLocale == Locale("en")
