@@ -2,9 +2,13 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:group_56_nasr_cubit/cubits/home/home_cubit.dart';
 import 'package:group_56_nasr_cubit/cubits/theme/theme_cubit.dart';
+import 'package:group_56_nasr_cubit/screens/file_screen.dart';
+import 'package:group_56_nasr_cubit/screens/image_screen.dart';
 import 'package:group_56_nasr_cubit/screens/login_screen.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:group_56_nasr_cubit/screens/video_screen.dart';
+import 'package:group_56_nasr_cubit/screens/web_view_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -37,7 +41,7 @@ class MyApp extends StatelessWidget {
             supportedLocales: context.supportedLocales,
             locale: context.locale,
             debugShowCheckedModeBanner: false,
-            home: LoginScreen(),
+            home: FileScreen(),
             theme: ThemeData.light(),
             darkTheme: ThemeData.dark(),
             themeMode: ThemeCubit.get(context).isDark
@@ -49,3 +53,14 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+
+
+
+//! Video        done
+//! Web View     done
+//! launch url  
+//! Image picker done
+//! File Picker  done
+//! pdf view 
+//! Play audio   done
