@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:group_56_nasr_cubit/cubits/home/home_cubit.dart';
 import 'package:group_56_nasr_cubit/cubits/theme/theme_cubit.dart';
 import 'package:group_56_nasr_cubit/screens/file_screen.dart';
+import 'package:group_56_nasr_cubit/screens/google_map_screen.dart';
 import 'package:group_56_nasr_cubit/screens/image_screen.dart';
 import 'package:group_56_nasr_cubit/screens/login_screen.dart';
 
@@ -41,12 +42,12 @@ class MyApp extends StatelessWidget {
             supportedLocales: context.supportedLocales,
             locale: context.locale,
             debugShowCheckedModeBanner: false,
-            home: FileScreen(),
+            home: GoogleMapScreen(),
             theme: ThemeData.light(),
-            darkTheme: ThemeData.dark(),
-            themeMode: ThemeCubit.get(context).isDark
-                ? ThemeMode.dark
-                : ThemeMode.light,
+            // darkTheme: ThemeData.dark(),
+            // themeMode: ThemeCubit.get(context).isDark
+            //     ? ThemeMode.dark
+            //     : ThemeMode.light,
           );
         },
       ),
